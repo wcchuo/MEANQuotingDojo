@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>QuotingDojo</title>
+        <link href='style.css' type="text/css" rel="stylesheet" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-dateFormat/1.0/jquery.dateFormat.js"></script>
+        <script>
+
+        </script>
+    </head>
+    <body>
+         <div class="container">
+             <h3>Here are the awesome quotes</h3>
+                <a href='/' class='button pull-right'>Back</a>
+             <hr>
+             <% for (var i in quotes) { %>
+                <span class='quote'>&ldquo;<%= quotes[i].quote %>&rdquo;</span></br>
+                <div class='name'>- <%= quotes[i].name %> at 
+                <%= quotes[i].datetime %></div></br>
+             <hr>
+             <% } %>
+                <a href='/' class='button pull-right'>Back</a>
+        </div>
+    </body>
+</html>

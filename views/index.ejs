@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>QuotingDojo</title>
+        <link href='style.css' type="text/css" rel="stylesheet" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function (){
+                $('input#submit').click(function (){
+                    var getDateTime = new Date(); 
+                    $('#datetime').val(getDateTime);
+                    console.log(getDateTime);
+                });
+            })
+       </script>
+    </head>
+    <body>
+        <div class="container">
+            <h3>Welcome to QuotingDojo</h3>
+            <form action='/main' method='post'>
+            
+                <label>Your Name: </label>
+                <input type='text' name='name' placeholder='Your name'></br>
+                
+                <label>Your Quote: </label>
+                <textarea name='quote' placeholder='Your quote'></textarea></br>
+                
+                <input type='hidden' value='' id='datetime' name='datetime'>
+                
+                <table>
+                    <tr>
+                        <td>
+                            <a href='/main' class='button pull-right'>Skip to Quote!</a>
+                        </td>
+                        <td>
+                            <input type='submit' value='Add My Quote' id='submit' class='button pull-right'>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+    </body>
+</html>
